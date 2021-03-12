@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror/theme/material.css">
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/mode/css/css.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <title>Live IDE</title>
+</head>
+<body>
+    <div class="container main half-screen">
+        <div class="body">
+            <div class="options half-screen">
+                <div class="main-op half-screen">
+                    <div class="op-button selected html">
+                        HTML
+                    </div>
+                    <div class="op-button css">
+                        CSS
+                    </div>
+                    <div class="op-button js">
+                        JS
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main editor half-screen">
+            
+        </div>
+        <iframe class="editor-view half-screen">
+
+        </iframe>
+        <div class="editor-options half-screen">
+            <p class="editor-options title">Controls:</p>
+            <div class="editor-options option au">
+                Pause Auto-Update
+            </div>
+            <div class="editor-options option run">
+                Run
+            </div>
+        </div>
+    </div>
+</body>
+</html>

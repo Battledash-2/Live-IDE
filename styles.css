@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main: #333333;
+    --main2: #222222;
+    --main2c: #5A5A5A;
+    --hover: #0F171C;
+    --dark-main: #fff;
+    --main-font: Consolas, Arial, sans-serif;
+    --secondary-font: Arial, sans-serif;
+}
+.container {
+    background: var(--main);
+}
+.main {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+}
+.options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--main2);
+    height: 50px;
+}
+.half-screen {
+    width: 50vw;
+}
+.main-op {
+    background: inherit;
+    height: inherit;
+    display: flex;
+}
+.op-button {
+    width: calc(50vw / 3);
+    background: var(--main2c);
+    height: inherit;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    cursor: pointer;
+    color: var(--dark-main);
+    font-family: var(--main-font);
+    flex-basis: calc(50vw / 3);
+}
+.op-button:hover {
+    background: var(--hover);
+}
+.editor {
+    font-size: 20px;
+}
+.cm-s-material.CodeMirror {
+    height: calc(100vh - 50px) !important;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.selected {
+    background: var(--hover);
+}
+.editor-view {
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 30px);
+    top: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+}
+.editor-options {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    background: var(--main);
+    display: grid;
+    align-content: center;
+    
+}
+.editor-options.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: var(--main-font);
+    background: #DFFCD0;
+    z-index: 999;
+    width: 80px;
+    text-align: center;
+}
+.editor-options.option {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: var(--secondary-font);
+    color: var(--dark-main);
+    cursor: pointer;
+    border-left: 1px solid #7B7DA9;
+}
+.editor-options.option:hover {
+    background: #51426E;
+}
+.editor-options.option.run {
+    left: 90px;
+    display: none;
+}
+.editor-options.option.au {
+    z-index: 999;
+}
+.enabled {
+    display: grid !important;
+}
