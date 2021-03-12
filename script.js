@@ -21,7 +21,7 @@ let currents = currents_copy;
 try {
     currents = JSON.parse(localStorage.getItem('currents')) || currents_copy;
 } catch(e) {
-    console.log('Couldn\'t load any saved data. This could be because no code is saved/');
+    console.log('Couldn\'t load any saved data. This could be because no code is saved');
 }
 let displaying = 'html';
 let edt;
@@ -35,7 +35,7 @@ const init = function() {
         mode: 'htmlmixed',
         theme: 'material',
         indentUnit: 4,
-        indentWithTabs: false
+        indentWithTabs: true
     });
     function run() {
         currents[displaying] = edt.getValue();
