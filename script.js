@@ -35,7 +35,8 @@ const init = function() {
         mode: 'htmlmixed',
         theme: 'material',
         indentUnit: 4,
-        indentWithTabs: true
+        indentWithTabs: true,
+        lineNumbers: true
     });
     function run() {
         currents[displaying] = edt.getValue();
