@@ -3,7 +3,7 @@ const $c = function(class_name) {
     return document.querySelector('.'+class_name);
 }
 
-let currents = {
+let currents_copy = {
     "html": `<!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +15,13 @@ let currents = {
 </html>`,
     "css": "body {\n\t\n}",
     "js": ""
+}
+
+let currents = currents_copy;
+try {
+    currents = JSON.parse(localStorage.getItem('currents')) || currents_copy;
+} catch(e) {
+    console.log('Couldn\'t load any saved data. This could be because no code is saved/');
 }
 let displaying = 'html';
 let edt;
@@ -100,6 +107,13 @@ const init = function() {
         if(!autoUpdate) return "auto update is currently paused";
         run();
     });
+    setInterval(() => {
+        try {
+            localStorage.setItem('currents', JSON.stringify(currents));
+        } catch(e) {
+            console.log('There was an error saving data. Error log:', e);
+        }
+    }, 250);
 }
 
 onload = init;
